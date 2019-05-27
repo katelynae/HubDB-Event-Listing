@@ -31,7 +31,7 @@ In order for the HubL contained within this module to work correctly the HubDB t
 
 In order to use the HubDB Dynamic Pages in this module this option must be toggled on within your HubDB table settings. See screenshot below:
 
-![alt text]( https://github.com/katelynae/HubDB-Event-Listing/screenshots/2-table-settings.jpg "HubDB table settings")
+![alt text]( https://github.com/katelynae/HubDB-Event-Listing/screenshots/2-table-settings.png "HubDB table settings")
 
 ### step 3 - Place on any HubSpot CMS Page
 
