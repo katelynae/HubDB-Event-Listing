@@ -1,0 +1,79 @@
+{% if dynamic_page_hubdb_row %}  
+<div class="event-banner-area" style="background-image: url('{{ dynamic_page_hubdb_row.image.url }}'); background-size: cover;">
+  <div class="event-header-container">
+    <div class="event-header-content">
+      <div class="event-header-text">
+        <h1>
+          {{ dynamic_page_hubdb_row.name }}
+        </h1> 
+        <p>
+          {{ dynamic_page_hubdb_row.date|datetimeformat('%A, %B %e, %Y') }} | {{ dynamic_page_hubdb_row.region }}
+        </p>       
+      </div>
+    </div>
+  </div>
+  <div class="event-banner-edge">
+    <svg viewBox="0 0 500 50" preserveAspectRatio="xMinYMin meet">
+      <path d="M0,50 L0,4 C95,-23 285,115 500,2 L500,50 L0,50 Z" style="stroke: none; fill: #fff;"></path>
+    </svg>
+  
+  </div>
+</div>
+<div class="events-listing container">
+  <div class="event-details-container">
+    <div class="event-section">
+      <hr>
+      <h2 class="event-section-header">
+        What to Expect
+      </h2>
+      <p>
+        {{ dynamic_page_hubdb_row.description }}
+      </p>
+    </div>
+    <div class="event-section">
+      <hr>
+      <h2 class="event-section-header">
+        Agenda
+      </h2>
+      <p>
+         {{ dynamic_page_hubdb_row.agenda }}
+      </p>
+     
+    </div>
+    <div class="event-section">
+      <hr>
+      <h2 class="event-section-header">
+        Featured Speaker
+      </h2>
+      <img src="{{ dynamic_page_hubdb_row.speaker_image.url }}" class="speaker-image" />
+      {{ dynamic_page_hubdb_row.speakers }}
+    </div>
+  </div>
+</div>
+{% elif module.hubdb_table %}
+{% set table = hubdb_table_rows(module.hubdb_table, queryparam) %}
+<div class="events container">
+  <div class="events-results">
+    {% for row in table %}
+    <div class="event-item">
+      <div class="event-item-content">
+        <div class="event-image-container">
+          <a href="{{ request.path }}/{{ row.hs_path }}">
+            <img src="{{ row.image.url }}" />
+          </a>
+        </div>
+        <div class="event-text-container" >
+          <h4>
+            {{ row.name }}
+          </h4>
+          <p>
+            {{ row.date|datetimeformat('%e of %B %Y') }}, {{ row.region }}
+          </p>
+          <a href="{{ request.path }}/{{ row.hs_path }}" class="event-cta">Learn more »</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

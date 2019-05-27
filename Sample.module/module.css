@@ -1,0 +1,123 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #33475b;
+    background-color: rgb(245, 248, 250);
+    font-family: "AvenirNext","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.625;
+    margin: 0;
+    padding: 0;
+}
+
+body .container {
+    max-width: 1141px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-banner-area {
+  color: #fff;
+  position: relative;
+  padding-bottom: 10%;
+  background-color: #425b76;
+}
+
+.event-banner-edge {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.event-header-container {
+    padding: 7.5rem 0;
+  position: relative;
+}
+
+.event-header-content {
+    box-sizing: content-box;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+.event-header-text {
+    text-align: center;
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+.event-header-text h1 {
+  font-weight: 700;
+  font-size: 3.4375rem;
+  line-height: 1.1818;
+}
+
+.event-header-text p {
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.event-details-container {
+  text-align: center;
+}
+
+.event-section {
+  margin: 2.5rem 0;
+}
+
+.event-section .speaker-image {
+  border-radius: 50%;
+}
+
+.events-results {
+display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.event-item {
+    -webkit-box-flex: 1;
+    flex: 1 1 33.33%;
+    max-width: calc(33.33% - 2rem);
+    margin: 1rem;
+}
+
+.event-item .event-item-container {
+  position: relative;
+}
+
+.event-text-container h4 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.3636;
+    margin: 0.5em 0!important;
+}
+
+.event-text-container p {
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.event-text-container a {
+    color: #0091ae;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.event-text-container a:hover {
+    color: #007a8c;
+    text-decoration: underline;
+}
